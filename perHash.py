@@ -10,10 +10,10 @@ from PIL import ImageOps
 import math
 
 
-def get_code(List, middle):
+def get_code(list_, middle):
     result = []
-    for index in range(0, len(List)):
-        if List[index] > middle:
+    for index in range(0, len(list_)):
+        if list_[index] > middle:
             result.append("1")
         else:
             result.append("0")
@@ -28,8 +28,8 @@ def comp_code(code1, code2):
     return num
 
 
-def get_middle(List):
-    li = List.copy()
+def get_middle(list_):
+    li = list_.copy()
     li.sort()
     value = 0
     if len(li) % 2 == 0:
