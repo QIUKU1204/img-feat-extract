@@ -15,7 +15,7 @@ def avhash(im):
 	im = im.resize((8, 8), Image.ANTIALIAS).convert('L')
 	avg = reduce(lambda x, y: x + y, im.getdata()) / 64.
 	# make 64 compared-values to a 16bit Hexadecimal number that also named  hash-values or image-fingerprint
-	return reduce(lambda x, y_z: x | (y_z[1] << y_z[0]), \
+	return reduce(lambda x, y_z: x | (y_z[1] << y_z[0]),
 	              enumerate(map(lambda i: 0 if i < avg else 1, im.getdata())), 0)  # reduce()'s initial parameter is 0
 
 

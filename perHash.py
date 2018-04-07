@@ -67,7 +67,7 @@ def get_coefficient(n):
     for i in range(1, n):
         value = []
         for j in range(0, n):
-            data = math.sqrt(2.0 / n) * math.cos(i * PI * (j + 0.5) / n);
+            data = math.sqrt(2.0 / n) * math.cos(i * PI * (j + 0.5) / n)
             value.append(data)
         matrix.append(value)
 

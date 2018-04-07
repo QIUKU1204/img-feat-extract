@@ -11,8 +11,8 @@ def split_image(img, part_size=(64, 64)):  # 把图像分为4x4 块，每块的�
 	w, h = img.size
 	pw, ph = part_size
 	assert w % pw == h % ph == 0
-	return [img.crop((i, j, i + pw, j + ph)).copy() \
-	        for i in range(0, w, pw) \
+	return [img.crop((i, j, i + pw, j + ph)).copy()
+	        for i in range(0, w, pw)
 	        for j in range(0, h, ph)]
 
 
@@ -56,7 +56,7 @@ def make_doc_data(lf, rf, index):
 
 if __name__ == '__main__':
 	for i in range(1, 7):
-		print('test_case_%d: %.3f%%' % (i, \
+		print('test_case_%d: %.3f%%' % (i,
 		                                calc_similar_by_path('test/TEST%d/%d.JPG' % (i, 1),
 		                                                     'test/TEST%d/%d.JPG' % (i, 2)) * 100))
 		make_doc_data('test/TEST%d/1.JPG' % (i), 'test/TEST%d/2.JPG' % (i), i)
